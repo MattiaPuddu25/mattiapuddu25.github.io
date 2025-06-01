@@ -1,0 +1,28 @@
+27/02/2022
+Aggiunta la sezione "Istituzioni" con i miei appunti in LaTeX del corso di "Istituzioni di Algebra".
+
+18/02/2022
+Aggiornata la sezione "Elementi di Analisi Complessa" con una versione quasi-definitiva degli appunti e una parte in LaTeX contenente il seminario; e' inoltre presente una lista degli enunciati e delle definizioni visti durante il corso.
+
+8/10/2021
+Aggiunte le sezioni dei corsi di "Elementi di Topologia Algebrica", "Elementi di Geometria Algebrica" e "Elementi di Analisi Complessa" che sto seguendo, con i miei appunti (scritti a mano). A differenza dei file PDF ottenuti dalla compilazione di un file TEX, che aggiorna sempre lo stesso file, si dovrebbe aggiornare il link del file condiviso: fino al completamento degli appunti, condivido la cartella che contiene i file, ma iCloud permette di accedere alle cartelle condivise solo con un Apple ID (che &egrave comunque possibile fare in modo gratuito)...
+
+
+27/09/2021
+Aggiunta la sezione "Errata Corrige" nelle note di Forme Modulari, e corrette alcune imprecisioni.
+
+
+11/08/2021
+Aggiunta la scheda "Olimpiadi" con le soluzioni che ho scritto per i problemi delle semifinali a squadre di Cesenatico (dal 2006 al 2019).
+
+
+10/07/2021
+Aggiornate le note di "Forme modulari" con la dimostrazione completa del teorema di molteplicita' 1 per le nuove forme nella sezione 8.6; a tal fine e' stata ampliata anche la sezione 8.4 "Rappresentazioni di gruppi finiti" con alcuni risultati necessari.
+
+
+4/06/2021 
+Aggiornata la grafica delle note di "Teoria dei Numeri Elementare"
+
+
+12/02/2021
+Aggiunto nella scheda "Altro" un codice Matlab per disegnare i cerchi di Gerschgorin di una matrice quadrata a coefficienti complessi (per riga, per colonna, ed eventualmente per intersecare le rispettive unioni)
