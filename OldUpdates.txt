@@ -1,3 +1,35 @@
+<h4>26/03/2024</h4>
+Fixed some issues in the LaTeX Templates code: headers now display better and an alternative version for the 'book' class title page has been added (more suitable for theses).<br>
+
+<h4>17/03/2024</h4>
+Updated almost definitively the solution files for the Math Olympiad team competitions in Cesenatico. For future updates, see the "Errata Corrige & Additions" section inside the files.<br>
+
+<h4>11/03/2024</h4>
+After a report of malfunctioning links in the LaTeX templates section, the links have been fixed.<br>
+
+<h4>01/10/2023</h4>
+All LaTeX templates updated to a nearly final version: tikz and pgfplots functionalities added, several graphic aspects reviewed. All templates explain the added features directly in the compiled PDF; the beamer templates explain how to use all class functions.<br>
+
+<h4>27/08/2023</h4>
+Added the section "Algebraic Geometry C" with the seminar prepared for the exam.<br>
+
+<h4>21/02/2023</h4>
+Added the section "Algebraic Number Theory 1" with my LaTeX notes.<br>
+
+<h4>07/11/2022</h4>
+Updated the appendix on set and integer partitions in the semifinal solution file.<br>
+
+<h4>14/09/2022</h4>
+Added the section "Groups and Representations" with notes and exercises from the course.<br>
+
+<h4>11/07/2022</h4>
+Final update to the "Elements of Algebraic Topology" notes; a handwritten part on a tablet may be transcribed into LaTeX in the future.<br>
+
+<h4>28/04/2022</h4>
+Added two appendices to the solution file for the team semifinals in Cesenatico: one about Varignon's parallelogram and another on integer/set partitions. These topics are not used in exercises but are relevant for advanced Olympiad problems.<br>
+
+
+
 27/02/2022
 Aggiunta la sezione "Istituzioni" con i miei appunti in LaTeX del corso di "Istituzioni di Algebra".
 
