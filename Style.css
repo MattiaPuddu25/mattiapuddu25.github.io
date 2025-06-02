@@ -59,7 +59,7 @@ a:link, a:visited {
 
 body {
 	padding: 50px;
-/*	background: url(HomeDarkBlue.JPG) no-repeat; */
+	background: url(Background_Images/Background.jpeg) no-repeat;
 	background-size: auto;
 	font-size: 18px;
 }
