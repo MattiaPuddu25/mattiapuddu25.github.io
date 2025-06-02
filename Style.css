@@ -12,26 +12,40 @@ a:link, a:visited {
 	background-color: #333;
 	color: white;
 	position: relative;
-	border-radius: 10px;
 }
 
 .text-block {
-	width: 80%;
+	border-radius: 10px;
+	bottom: 0px;
 	float: left;
+	left: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	width: 80%;
 }
 
 .contacts {
-	width: 80%;
 	border-radius: 25px;
+	bottom: 0px;
+	left: 0px;
+	float: center;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 80%;
 }
 
 .updates {
-	width: 100px;
 	border-radius: 500px;
-	color: red;
+	bottom: 0px;
+	float: center;
+	left: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100px;
 }
 
 .title {
+	float: center;
 	width: 250px;
 	border-radius: 5px;
 	bottom: 20px;
@@ -45,7 +59,7 @@ a:link, a:visited {
 
 body {
 	padding: 50px;
-	background: url(HomeDarkBlue.JPG) no-repeat;
+	background: url(Background_Images/HomeDarkBlue.JPG) no-repeat;
 	background-size: auto;
 }
 
