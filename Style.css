@@ -136,15 +136,18 @@ li.dropdown {
 	}
 }
 
-  .pair-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
-  }
-  .text-left {
-    width: 48%;
-  }
-  .link-right {
-    width: 48%;
-  }
+.pair-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-left, .link-right {
+  width: 48%;
+  box-sizing: border-box;
+  /* aggiungi padding se vuoi */
+  padding: 0 1rem;
+}
