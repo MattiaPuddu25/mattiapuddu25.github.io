@@ -131,6 +131,8 @@ li.dropdown {
 #column2 {
 	float: right;
 	width: 60%;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 .popup {
