@@ -137,7 +137,7 @@ li.dropdown {
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-	.text-block, .contacts, .title, .access {
+	.text-block, .large-block, .contacts, .title, .access {
 		width: 95%;
 		font-size: 16px;
 		padding: 1rem;
