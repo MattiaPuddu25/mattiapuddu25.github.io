@@ -136,19 +136,9 @@ li.dropdown {
 	}
 }
 
-.MOcontainer {
+  .pair-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 2rem;
-  }
-
-.text-left {
-    flex: 1;
-    padding-right: 1rem;
-  }
-
-.link-right {
-    flex: 1;
-    padding-left: 1rem;
   }
