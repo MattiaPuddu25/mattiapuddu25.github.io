@@ -28,9 +28,22 @@ body {
 	color: white;
 	position: relative;
 	border-radius: 10px;
-	padding: 1.5rem;
+	padding: .5rem;
 	width: 90%;
 	max-width: 800px;
+	margin: 1rem auto;
+	box-sizing: border-box;
+}
+
+/* Large block style */
+.large-block {
+	background-color: #333;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+	padding: .5rem;
+	width: 90%;
+	max-width: 1000px;
 	margin: 1rem auto;
 	box-sizing: border-box;
 }
