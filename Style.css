@@ -1,0 +1,159 @@
+a:link, a:visited {
+	color: orange;
+	text-decoration: none;
+}
+
+.container {
+	position: relative;
+	font-family: Arial;
+}
+
+.text-block, .contacts, .updates, .title, .access {
+	background-color: #333;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+}
+
+.text-block {
+	width: 80%;
+	float: left;
+}
+
+.contacts {
+	width: 80%;
+	border-radius: 25px;
+}
+
+.updates {
+	width: 100px;
+	border-radius: 500px;
+	color: red;
+}
+
+.title {
+	width: 250px;
+	border-radius: 5px;
+	bottom: 20px;
+}
+
+.access {
+	width: 60px;
+	border-radius: 5px;
+	bottom: 20px;
+}
+
+body {
+	padding: 50px;
+	background: url(HomeDarkBlue.JPG) no-repeat;
+	background-size: auto;
+}
+
+ul {
+	border-radius: 5px;
+	list-style-type: none;
+	padding: 0;
+	background-color: #333;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+li a, .dropbtn {
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+}
+
+li.dropdown {
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 160px;
+	box-shadow: 0px 16px 16px rgba(0,0,0,0.25);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: orange;
+	padding: 10px;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#boxes {
+	display: table;
+	clear: both;
+}
+
+#column1, #column1a, #column2 {
+	background-color: #333;
+	color: white;
+	position: relative;
+}
+
+#column1 {
+	float: left;
+	width: 30%;
+}
+
+#column1a {
+	float: left;
+	width: 15%;
+}
+
+#column2 {
+	float: right;
+	width: 65%;
+}
+
+.popup {
+	position: absolute;
+	cursor: pointer;
+	background-color: #333;
+	color: orange;
+	border-radius: 5px;
+	padding: 5px 10px;
+	z-index: 1;
+}
+
+.pop-header {
+	width: 50%;
+	background-color: #000;
+	height: 50px;
+	padding: 20px;
+}
+
+.popup .popuptext {
+	visibility: hidden;
+	width: 150px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 8px;
+	padding: 8px 0;
+	position: absolute;
+	bottom: 25%;
+	left: 130%;
+	margin-left: -150px;
+}
+
+.popup .show {
+	visibility: visible;
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
