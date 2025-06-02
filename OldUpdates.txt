@@ -1,3 +1,6 @@
+<h4>14/08/2024</h4>
+Updated the solution files for the team competitions in Cesenatico: now all solutions from 2006 to 2024 are included.<br>
+
 <h4>26/03/2024</h4>
 Fixed some issues in the LaTeX Templates code: headers now display better and an alternative version for the 'book' class title page has been added (more suitable for theses).<br>
 
