@@ -18,7 +18,7 @@ a:link, a:visited {
 	border-radius: 10px;
 	bottom: 0px;
 	float: left;
-	font-size: 15px;
+	font-size: 18px;
 	left: 0px;
 	padding: 20px 25px;
 	width: 80%;
@@ -61,7 +61,7 @@ body {
 	padding: 50px;
 /*	background: url(HomeDarkBlue.JPG) no-repeat; */
 	background-size: auto;
-	font-size: 15px;
+	font-size: 18px;
 }
 
 ul {
