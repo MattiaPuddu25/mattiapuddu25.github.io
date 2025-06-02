@@ -116,6 +116,8 @@ li.dropdown {
 	background-color: #333;
 	color: white;
 	position: relative;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 #column1 {
