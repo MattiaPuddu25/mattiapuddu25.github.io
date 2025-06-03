@@ -33,11 +33,11 @@ and a brief description of the content.
 </div>
 
 <div class="tab-block">
-  <table class="custom-table">
+  <table class="custom-table" id="sortable-table">
     <thead>
       <tr>
-        <th>TITLE</th>
-        <th>DATE</th>
+        <th onclick="sortTable(0)">TITLE &#x25B2;&#x25BC;</th>
+        <th onclick="sortTable(1)">DATE &#x25B2;&#x25BC;</th>
         <th>DOWNLOAD</th>
         <th></th>
       </tr>
@@ -165,5 +165,43 @@ and a brief description of the content.
   Contact:<br>
   mattiapuddu@icloud.com
 </div>
+
+<script>
+  let sortDirections = {};
+
+  function sortTable(colIndex) {
+    const table = document.getElementById("sortable-table");
+    const tbody = table.tBodies[0];
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    // Determina direzione (ascendente o discendente)
+    sortDirections[colIndex] = !sortDirections[colIndex];
+    const isAscending = sortDirections[colIndex];
+
+    // Ordina le righe
+    rows.sort((a, b) => {
+      const aText = a.cells[colIndex].textContent.trim().toLowerCase();
+      const bText = b.cells[colIndex].textContent.trim().toLowerCase();
+
+      if (colIndex === 1) {
+        // Data nel formato DD/MM/YYYY → convertila in YYYYMMDD per confrontare
+        const parseDate = (str) => {
+          const [d, m, y] = str.split("/");
+          return `${y}${m.padStart(2, '0')}${d.padStart(2, '0')}`;
+        };
+        return isAscending
+          ? parseDate(aText).localeCompare(parseDate(bText))
+          : parseDate(bText).localeCompare(parseDate(aText));
+      } else {
+        return isAscending
+          ? aText.localeCompare(bText)
+          : bText.localeCompare(aText);
+      }
+    });
+
+    // Riaggiungi le righe ordinate al tbody
+    rows.forEach(row => tbody.appendChild(row));
+  }
+</script>
 </body>
 </html>
