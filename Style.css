@@ -164,3 +164,47 @@ li.dropdown {
   /* aggiungi padding se vuoi */
   padding: 0 1rem;
 }
+
+.custom-table {
+  border-collapse: collapse;
+  margin: 40px auto;           /* centra la tabella orizzontalmente */
+  background-color: black;
+  color: white;
+  width: 80%;                  /* larghezza totale della tabella */
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+
+.custom-table th:nth-child(1),
+.custom-table td:nth-child(1) {
+  width: 25%;
+}
+
+.custom-table th:nth-child(2),
+.custom-table td:nth-child(2) {
+  width: 10%;
+}
+
+.custom-table th:nth-child(3),
+.custom-table td:nth-child(3) {
+  width: 10%;
+}
+
+.custom-table th:nth-child(4),
+.custom-table td:nth-child(4) {
+  width: 50%;
+}
+
+.custom-table a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.custom-table a:hover {
+  text-decoration: underline;
+}
