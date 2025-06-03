@@ -60,6 +60,7 @@ body {
 	box-sizing: border-box;
 	max-width: 1600px;
 	overflow-x: auto;
+	align-self: center;
 }
 
 .tab-block table {
