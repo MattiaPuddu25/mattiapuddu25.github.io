@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Templates LaTeX</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+
+<body style="text-align:center">
+<center>
+<div class="title">
+	<p style="font-size:25px;">Templates LaTeX</p>
+</div>
+</center>
+
+<div id="NavigationBar"></div>
+
+<script>
+  fetch('NavigationBar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('NavigationBar').innerHTML = data;
+    });
+</script>
+
+<br><br>
+<div class="large-block" style="margin-top: 2rem;">
+Over the years, I have gained considerable experience in using LaTeX, and I now systematically rely on these templates for books, articles, and beamer
+presentations. These templates have been tested on both TeXPad and Overleaf.
+<br><br>
+In the latest version (06/2025), several updates were made: the preamble is now minimal, and the parts that need to be modified by the user
+are contained in separate files and are clearly marked. Everything else, in principle, should not be changed unless the user knows exactly
+what they are doing.
+<br><br>
+All templates, once compiled, display in the PDF file the various commands and features that I have added.
+In the case of the beamer template, some specific functionalities of the beamer class are also illustrated.
+</div>
+
+<br><br>
+
+<div class="pair-container">
+  <div class="text-left large-block">
+    My Book Template.
+  </div>
+  <div class="link-right text-block">
+    <h4>Click <a href="https://www.overleaf.com/latex/templates/book-template/bykqndqgncbd">HERE</a> to see the template in Overleaf, and
+        <a href="Templates/BookTemplate.pdf">HERE</a> to download the compiled PDF.
+     </h4>
+  </div>
+</div>
+
+<br><br>
+
+<div class="pair-container">
+  <div class="text-left large-block">
+    My Article Template.
+  </div>
+  <div class="link-right text-block">
+    <h4>Click <a href="https://www.overleaf.com/latex/templates/articletemplate/tcqpszvzwjgq">HERE</a> to see the template in Overleaf, and
+        <a href="Templates/ArticleTemplate.pdf">HERE</a> to download the compiled PDF.
+     </h4>
+  </div>
+</div>
+
+<br><br>
+
+<div class="pair-container">
+  <div class="text-left large-block">
+    My Beamer Template.
+  </div>
+  <div class="link-right text-block">
+    <h4>Click <a href="https://www.overleaf.com/latex/templates/beamertemplate/jczqjdrzzmfc">HERE</a> to see the template in Overleaf, and
+        <a href="Templates/BeamerTemplate.pdf">HERE</a> to download the compiled PDF.
+     </h4>
+  </div>
+</div>
+
+<br><br>
+
+<div class="text-block" style="margin-top: 2rem;">
+  Contact:<br>
+  mattiapuddu@icloud.com
+</div>
+</body>
+</html>
