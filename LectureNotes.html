@@ -374,19 +374,24 @@ function filterTableBothCols() {
 
 </script>
 
-document.getElementById('toggleText').addEventListener('click', function() {
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('toggleText');
   const extraText = document.getElementById('extraText');
-  if (extraText.classList.contains('show')) {
-    extraText.classList.remove('show');
-    extraText.style.display = 'none';
-    this.textContent = 'Mostra dettagli';
-  } else {
-    extraText.style.display = 'block';
-    // Forza il reflow per attivare la transizione
-    void extraText.offsetWidth;
-    extraText.classList.add('show');
-    this.textContent = 'Nascondi dettagli';
-  }
+
+  toggleBtn.addEventListener('click', function() {
+    if (extraText.classList.contains('show')) {
+      extraText.classList.remove('show');
+      extraText.style.display = 'none';
+      this.textContent = 'Show details';
+    } else {
+      extraText.style.display = 'block';
+      void extraText.offsetWidth; // forza il reflow
+      extraText.classList.add('show');
+      this.textContent = 'Hide details';
+    }
+  });
 });
+</script>
 </body>
 </html>
