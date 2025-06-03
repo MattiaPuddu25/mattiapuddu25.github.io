@@ -167,15 +167,17 @@ li.dropdown {
 
 table.custom-table {
   border-collapse: collapse;
-  margin: 40px auto !important;         /* forza la centratura */
-  background-color: black !important;   /* forza lo sfondo */
-  color: white !important;              /* forza il colore del testo */
+  margin: 40px auto;
+  background-color: black;
+  color: white;
   width: 80%;
+  z-index: 10;
+  position: relative;
 }
 
 table.custom-table th,
 table.custom-table td {
-  border: 1px solid white !important;
+  border: 1px solid white;
   padding: 10px;
   text-align: left;
 }
@@ -200,8 +202,9 @@ table.custom-table td:nth-child(4) {
   width: 50%;
 }
 
+/* Link solo nella tabella */
 table.custom-table a {
-  color: lightblue !important;
+  color: lightblue;
   text-decoration: none;
 }
 
