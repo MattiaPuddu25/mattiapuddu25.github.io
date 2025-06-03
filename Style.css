@@ -55,7 +55,7 @@ body {
 	border-radius: 10px;
 	padding: 0;
 	width: 90%;
-	margin: 1rem 1rem;
+	margin: 1rem auto;
 	box-sizing: border-box;
 	max-width: 1600px;
 	overflow-x: auto;
