@@ -33,11 +33,7 @@ and a brief description of the content.
 </div>
 
 <div class="tab-block">
-  <!-- Input ricerca prima colonna -->
-  <input type="text" id="searchCol1" placeholder="Search first column" onkeyup="filterTable(0)">
-
-  <!-- Input ricerca ultima colonna -->
-  <input type="text" id="searchLastCol" placeholder="Search last column" onkeyup="filterTableLastCol()">
+<input type="text" id="searchBothCols" placeholder="Search first and last columns" onkeyup="filterTableBothCols()">
 
   <table class="custom-table" id="myTable">
     <thead>
@@ -346,32 +342,26 @@ function sortTable(colIndex) {
   rows.forEach(row => tbody.appendChild(row));
 }
 
-function filterTable(colIndex) {
-  const input = document.getElementById("searchCol1");
-  const filter = input.value.toLowerCase();
-  const table = document.getElementById("myTable");
-  const rows = table.tBodies[0].rows;
-
-  for (let row of rows) {
-    const cell = row.cells[colIndex];
-    const text = cell.textContent.toLowerCase();
-    row.style.display = text.includes(filter) ? "" : "none";
-  }
-}
-
-function filterTableLastCol() {
-  const input = document.getElementById("searchLastCol");
+function filterTableBothCols() {
+  const input = document.getElementById("searchBothCols");
   const filter = input.value.toLowerCase();
   const table = document.getElementById("myTable");
   const rows = table.tBodies[0].rows;
   const lastColIndex = table.tBodies[0].rows[0].cells.length - 1;
 
   for (let row of rows) {
-    const cell = row.cells[lastColIndex];
-    const text = cell.textContent.toLowerCase();
-    row.style.display = text.includes(filter) ? "" : "none";
+    const firstColText = row.cells[0].textContent.toLowerCase();
+    const lastColText = row.cells[lastColIndex].textContent.toLowerCase();
+
+    // Mostra la riga se almeno una delle due colonne contiene il filtro
+    if (firstColText.includes(filter) || lastColText.includes(filter)) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
   }
 }
+
 </script>
 </body>
 </html>
