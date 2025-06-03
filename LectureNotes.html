@@ -33,7 +33,13 @@ and a brief description of the content.
 </div>
 
 <div class="tab-block">
-  <table class="custom-table" id="sortable-table">
+  <!-- Input ricerca prima colonna -->
+  <input type="text" id="searchCol1" placeholder="Search first column" onkeyup="filterTable(0)">
+
+  <!-- Input ricerca ultima colonna -->
+  <input type="text" id="searchLastCol" placeholder="Search last column" onkeyup="filterTableLastCol()">
+
+  <table class="custom-table" id="myTable">
     <thead>
       <tr>
         <th onclick="sortTable(0)">TITLE &#x25B2;&#x25BC;</th>
@@ -286,7 +292,7 @@ and a brief description of the content.
   let sortDirections = {};
 
   function sortTable(colIndex) {
-    const table = document.getElementById("sortable-table");
+    const table = document.getElementById("myTable");
     const tbody = table.tBodies[0];
     const rows = Array.from(tbody.querySelectorAll("tr"));
 
@@ -318,6 +324,54 @@ and a brief description of the content.
     // Re-add sorted rows to tbody
     rows.forEach(row => tbody.appendChild(row));
   }
+</script>
+
+<script>
+function sortTable(colIndex) {
+  const table = document.getElementById("myTable");
+  const tbody = table.tBodies[0];
+  const rows = Array.from(tbody.rows);
+  let asc = table.getAttribute("data-sort-dir") !== "asc";
+  table.setAttribute("data-sort-dir", asc ? "asc" : "desc");
+
+  rows.sort((a, b) => {
+    const cellA = a.cells[colIndex].textContent.trim().toLowerCase();
+    const cellB = b.cells[colIndex].textContent.trim().toLowerCase();
+
+    if (cellA < cellB) return asc ? -1 : 1;
+    if (cellA > cellB) return asc ? 1 : -1;
+    return 0;
+  });
+
+  rows.forEach(row => tbody.appendChild(row));
+}
+
+function filterTable(colIndex) {
+  const input = document.getElementById("searchCol1");
+  const filter = input.value.toLowerCase();
+  const table = document.getElementById("myTable");
+  const rows = table.tBodies[0].rows;
+
+  for (let row of rows) {
+    const cell = row.cells[colIndex];
+    const text = cell.textContent.toLowerCase();
+    row.style.display = text.includes(filter) ? "" : "none";
+  }
+}
+
+function filterTableLastCol() {
+  const input = document.getElementById("searchLastCol");
+  const filter = input.value.toLowerCase();
+  const table = document.getElementById("myTable");
+  const rows = table.tBodies[0].rows;
+  const lastColIndex = table.tBodies[0].rows[0].cells.length - 1;
+
+  for (let row of rows) {
+    const cell = row.cells[lastColIndex];
+    const text = cell.textContent.toLowerCase();
+    row.style.display = text.includes(filter) ? "" : "none";
+  }
+}
 </script>
 </body>
 </html>
