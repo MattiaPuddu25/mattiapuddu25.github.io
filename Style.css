@@ -197,7 +197,7 @@ table.custom-table td {
 
 table.custom-table th:nth-child(1),
 table.custom-table td:nth-child(1) {
-  width: 35%;
+  width: 24%;
 }
 
 table.custom-table th:nth-child(2),
@@ -207,12 +207,12 @@ table.custom-table td:nth-child(2) {
 
 table.custom-table th:nth-child(3),
 table.custom-table td:nth-child(3) {
-  width: 5%;
+  width: 4%;
 }
 
 table.custom-table th:nth-child(4),
 table.custom-table td:nth-child(4) {
-  width: 60%;
+  width: 64%;
 }
 
 /* Link solo nella tabella */
@@ -226,7 +226,7 @@ table.custom-table a:hover {
 }
 
 #searchBothCols {
-  width: 40%;        /* occupa tutta la larghezza del contenitore */
+  width: 50%;        /* occupa tutta la larghezza del contenitore */
   max-width: 600px;   /* limite massimo di larghezza */
   padding: 0.5rem 1rem; /* spazio interno più ampio */
   font-size: 1.2rem;  /* testo più grande */
