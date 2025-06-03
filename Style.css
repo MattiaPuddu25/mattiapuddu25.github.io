@@ -225,12 +225,13 @@ table.custom-table a:hover {
   text-decoration: underline;
 }
 
-#searchCol1, #searchLastCol {
-  margin: 0.5rem 0;
-  padding: 0.3rem 0.5rem;
-  width: 100%;
-  max-width: 300px;
-  border-radius: 4px;
+#searchBothCols {
+  width: 40%;        /* occupa tutta la larghezza del contenitore */
+  max-width: 600px;   /* limite massimo di larghezza */
+  padding: 0.5rem 1rem; /* spazio interno più ampio */
+  font-size: 1.2rem;  /* testo più grande */
+  border-radius: 6px;
   border: 1px solid #ccc;
-  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem; /* margine sotto per distanziare dalla tabella */
 }
