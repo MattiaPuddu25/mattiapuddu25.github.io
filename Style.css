@@ -58,6 +58,12 @@ body {
 	margin: 1rem auto;
 	box-sizing: border-box;
 	max-width: 1600px;
+	overflow-x: auto;
+}
+
+.tab-block table {
+  width: 100%;
+  table-layout: fixed;
 }
 
 /* Navigation bar */
