@@ -43,7 +43,7 @@ body {
 	border-radius: 10px;
 	padding: .5rem;
 	width: 90%;
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 1rem auto;
 	box-sizing: border-box;
 }
@@ -217,7 +217,7 @@ table.custom-table td:nth-child(4) {
 
 /* Link solo nella tabella */
 table.custom-table a {
-  color: #orange;
+  color: orange;
   text-decoration: none;
 }
 
