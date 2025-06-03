@@ -54,8 +54,8 @@ body {
 	position: relative;
 	border-radius: 10px;
 	padding: .5rem;
-	width: 100%;
-	margin: 1rem auto;
+	width: 90%;
+	margin: 1rem 1rem;
 	box-sizing: border-box;
 	max-width: 1600px;
 	overflow-x: auto;
