@@ -43,7 +43,7 @@ body {
 	border-radius: 10px;
 	padding: .5rem;
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 1rem auto;
 	box-sizing: border-box;
 }
@@ -57,7 +57,7 @@ body {
 	width: 100%;
 	margin: 1rem auto;
 	box-sizing: border-box;
-	max-width: 1400px;
+	max-width: 1600px;
 }
 
 /* Navigation bar */
