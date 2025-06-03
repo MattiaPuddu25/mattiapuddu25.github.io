@@ -85,8 +85,8 @@ and a brief description of the content.
   <td>
     My notes from the course taught by professors Giovanni Gaiffi and Enrico Le Donne in the academic year 2018/2019.<br><br>
     Main topics of the course:
-    <button type="button" id="toggleText">Show details</button>
-    <div id="extraText" style="display:none; margin-top: 1rem;">
+    <button id=toggleText1 type="button">Show details</button>
+    <div id="extraText1" style="display:none; margin-top: 1rem;">
       - Lie Algebras: definitions, homomorphisms and first properties. Killing form.<br>
       - Representation theory of Lie algebras. Casimir element. Weyl Theorem. The algebra <span style="font-family: serif; font-style: italic;">sl</span>(2,K) 
       and its irreducible representations. Standard cyclic modules. Weight lattice and examples.<br>
@@ -104,12 +104,13 @@ and a brief description of the content.
       <tr>
         <td>Elementary Number Theory</td>
         <td>25/06/2024</td>
-        <td><a href="https://www.icloud.com/iclouddrive/01fWql1-ta-3egBRxl0897Ejg#TNE">PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
+        <td><a href="https://www.icloud.com/iclouddrive/01fWql1-ta-3egBRxl0897Ejg#TNE">PDF
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
 	style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
         <td>My notes from the course taught by professor Giuseppe Puglisi in the academic year 2017/2018.<br><br>
     Main topics of the course:
-    <button type="button" id="toggleText">Show details</button>
-    <div id="extraText" style="display:none; margin-top: 1rem;">
+    <button id=toggleText2 type="button">Show details</button>
+    <div id="extraText2" style="display:none; margin-top: 1rem;">
       - The problem of the distribution of primes: the Prime Number Theorem. Lagrange's four-squares theorem. Quadratic residues. The quadratic reciprocity law. <br>
       - Quadratic congruences and congruences of higher degree. The structure of multiplicative groups modulo q. <br>
       - Arithmetic functions. Dirichlet series and infinite products. Asymptotic behavior of arithmetic functions. Mertens and Chebyshev theorems. 
@@ -382,23 +383,24 @@ function filterTableBothCols() {
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleBtn = document.getElementById('toggleText');
-  const extraText = document.getElementById('extraText');
-
-  toggleBtn.addEventListener('click', function() {
-    if (extraText.classList.contains('show')) {
-      extraText.classList.remove('show');
-      extraText.style.display = 'none';
-      this.textContent = 'Show details';
-    } else {
-      extraText.style.display = 'block';
-      void extraText.offsetWidth; // forza il reflow
-      extraText.classList.add('show');
-      this.textContent = 'Hide details';
-    }
-  });
-});
+  function toggleExtraText(idButton, idText) {
+    document.getElementById(idButton).addEventListener('click', function () {
+      const extraText = document.getElementById(idText);
+      if (extraText.classList.contains('show')) {
+        extraText.classList.remove('show');
+        extraText.style.display = 'none';
+        this.textContent = 'Show details';
+      } else {
+        extraText.style.display = 'block';
+        void extraText.offsetWidth;
+        extraText.classList.add('show');
+        this.textContent = 'Hide details';
+      }
+    });
+  }
+  toggleExtraText('toggleText1', 'extraText1');
+  toggleExtraText('toggleText2', 'extraText2');
 </script>
+
 </body>
 </html>
