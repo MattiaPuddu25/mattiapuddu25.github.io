@@ -61,6 +61,7 @@ body {
 	max-width: 1600px;
 	overflow-x: auto;
 	align-self: center;
+	display: block;
 }
 
 .tab-block table {
