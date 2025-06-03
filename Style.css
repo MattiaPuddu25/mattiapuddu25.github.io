@@ -179,7 +179,7 @@ li.dropdown {
 
 table.custom-table {
   border-collapse: collapse;
-  margin: 0px auto;
+  margin: 0;
   color: white;
   width: 100%;
   z-index: 10;
