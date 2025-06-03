@@ -244,3 +244,14 @@ table.custom-table a:hover {
   box-sizing: border-box;
   margin-bottom: 1rem; /* margine sotto per distanziare dalla tabella */
 }
+
+#extraText {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+#extraText.show {
+  display: block;
+  max-height: 1000px; /* abbastanza alto da contenere il testo */
+}

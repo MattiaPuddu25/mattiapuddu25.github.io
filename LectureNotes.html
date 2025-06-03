@@ -72,22 +72,32 @@ and a brief description of the content.
         <td>A description of the Cantor set using the representation of real numbers in base 3.</td>
       </tr>
     
-      <tr>
-        <td>Lie Algebras and Lie Groups</td>
-        <td>16/06/2021</td>
-        <td><a href="https://www.icloud.com/iclouddrive/0VmsdmEdeUAt4LdeIKgkTW7wg#AGLie">PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-	style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-        <td>My notes from the course taught by professors Giovanni Gaiffi and Enrico Le Donne in the academic year 2018/2019.<br><br>
-        Main topics of the course:<br>
-             - Lie Algebras: definitions, homomorphisms and first properties. Killing form.<br>
-             - Representation theory of Lie algebras. Casimir element. Weyl Theorem. The algebra <span style="font-family: serif; font-style: italic;">sl</span>(2,K) 
-             and its irreducible representations. Standard cyclic modules. Weight lattice and examples.<br>
-             - Root systems: Dynkin diagrams and their complete classification. Weyl groups. Connection between Lie Algebras and root system: Lie theorem and
-        semisimplicity criterion. Toral algebras.<br>
-             - Poincaré-Birkhoff-Witt theorem and Serre relations.<br>
-             - Lie Groups: definitions, homomorphisms and first properties. The Lie Algebra of <span style="font-family: serif; font-weight: normal; font-style: 
-             normal;">GL</span>(n,&Ropf;). One-parameter subgroups and subalgebras. Exponential map. Adjoint representation. Baker-Campbell-Hausdorff formula.</td>
-      </tr>
+<tr>
+  <td>Lie Algebras and Lie Groups</td>
+  <td>16/06/2021</td>
+  <td>
+    <a href="https://www.icloud.com/iclouddrive/0VmsdmEdeUAt4LdeIKgkTW7wg#AGLie">
+      PDF
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
+           style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+    </a>
+  </td>
+  <td>
+    My notes from the course taught by professors Giovanni Gaiffi and Enrico Le Donne in the academic year 2018/2019.<br><br>
+    Main topics of the course:<br>
+    <button type="button" id="toggleText">Mostra dettagli</button>
+    <div id="extraText" style="display:none; margin-top: 1rem;">
+      - Lie Algebras: definitions, homomorphisms and first properties. Killing form.<br>
+      - Representation theory of Lie algebras. Casimir element. Weyl Theorem. The algebra <span style="font-family: serif; font-style: italic;">sl</span>(2,K) 
+      and its irreducible representations. Standard cyclic modules. Weight lattice and examples.<br>
+      - Root systems: Dynkin diagrams and their complete classification. Weyl groups. Connection between Lie Algebras and root system: Lie theorem and
+      semisimplicity criterion. Toral algebras.<br>
+      - Poincaré-Birkhoff-Witt theorem and Serre relations.<br>
+      - Lie Groups: definitions, homomorphisms and first properties. The Lie Algebra of <span style="font-family: serif; font-weight: normal; font-style: normal;">GL</span>(n,&Ropf;). One-parameter subgroups and subalgebras. Exponential map. Adjoint representation. Baker-Campbell-Hausdorff formula.
+    </div>
+  </td>
+</tr>
+
 
       <tr>
         <td>Elementary Number Theory</td>
@@ -363,5 +373,20 @@ function filterTableBothCols() {
 }
 
 </script>
+
+document.getElementById('toggleText').addEventListener('click', function() {
+  const extraText = document.getElementById('extraText');
+  if (extraText.classList.contains('show')) {
+    extraText.classList.remove('show');
+    extraText.style.display = 'none';
+    this.textContent = 'Mostra dettagli';
+  } else {
+    extraText.style.display = 'block';
+    // Forza il reflow per attivare la transizione
+    void extraText.offsetWidth;
+    extraText.classList.add('show');
+    this.textContent = 'Nascondi dettagli';
+  }
+});
 </body>
 </html>
