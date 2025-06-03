@@ -206,7 +206,7 @@ table.custom-table td {
 
 table.custom-table th:nth-child(1),
 table.custom-table td:nth-child(1) {
-  width: 20%;
+  width: 15%;
 }
 
 table.custom-table th:nth-child(2),
@@ -216,12 +216,12 @@ table.custom-table td:nth-child(2) {
 
 table.custom-table th:nth-child(3),
 table.custom-table td:nth-child(3) {
-  width: 8%;
+  width: 6%;
 }
 
 table.custom-table th:nth-child(4),
 table.custom-table td:nth-child(4) {
-  width: 64%;
+  width: 69%;
 }
 
 /* Link solo nella tabella */
