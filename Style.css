@@ -168,7 +168,7 @@ li.dropdown {
 .custom-table {
   border-collapse: collapse;
   margin: 40px auto;           /* centra la tabella orizzontalmente */
-  background-color: black;
+  background-color: #333;
   color: white;
   width: 80%;                  /* larghezza totale della tabella */
 }
