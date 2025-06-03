@@ -174,7 +174,7 @@ li.dropdown {
   width: 48%;
   box-sizing: border-box;
   /* aggiungi padding se vuoi */
-  padding: 0 1rem;
+  padding: 0 .25rem;
 }
 
 table.custom-table {
