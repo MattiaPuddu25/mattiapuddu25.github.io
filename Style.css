@@ -123,17 +123,17 @@ li.dropdown {
 
 .left-column {
   float: left;
-  width: 40%;
+  width: 35%;
   box-sizing: border-box;
-  padding-right: 1rem;
-  margin-left: 5%;
+  padding-right: .5rem;
+  margin-left: 2%;
 }
 
 .right-column {
   float: left;
-  width: 50%;
+  width: 60%;
   box-sizing: border-box;
-  padding-left: 1rem;
+  padding-left: .5rem;
   margin-left: 2%;
 }
 
