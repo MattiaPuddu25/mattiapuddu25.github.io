@@ -42,7 +42,7 @@
     <div style="overflow-x: auto;"></div>
 
     <br>
-    <input type="text" id="searchBothCols" placeholder="Search first and last columns" onkeyup="filterTableBothCols()">
+<input type="text" id="searchBothCols" placeholder="Search" onkeyup="filterTableAllCols()">
     <br><br>
 
     <div class="table-container">
@@ -545,24 +545,25 @@
       return null;
     }
 
-    function filterTableBothCols() {
-      const input = document.getElementById("searchBothCols");
-      const filter = input.value.toLowerCase();
-      const table = document.getElementById("myTable");
-      const rows = table.tBodies[0].rows;
-      const lastColIndex = table.tBodies[0].rows[0].cells.length - 1;
+function filterTableAllCols() {
+  const input = document.getElementById("searchBothCols");
+  const filter = input.value.toLowerCase();
+  const table = document.getElementById("myTable");
+  const rows = table.tBodies[0].rows;
 
-      for (let row of rows) {
-        const firstColText = row.cells[0].textContent.toLowerCase();
-        const lastColText = row.cells[lastColIndex].textContent.toLowerCase();
+  for (let row of rows) {
+    let textFound = false;
 
-        if (firstColText.includes(filter) || lastColText.includes(filter)) {
-          row.style.display = "";
-        } else {
-          row.style.display = "none";
-        }
+    for (let cell of row.cells) {
+      if (cell.textContent.toLowerCase().includes(filter)) {
+        textFound = true;
+        break;
       }
     }
+
+    row.style.display = textFound ? "" : "none";
+  }
+}
   </script>
 
   <script>
