@@ -230,22 +230,22 @@ table.custom-table td {
 
 table.custom-table th:nth-child(1),
 table.custom-table td:nth-child(1) {
-  width: 18%;
+  width: 14%;
 }
 
 table.custom-table th:nth-child(2),
 table.custom-table td:nth-child(2) {
-  width: 16%;
+  width: 8%;
 }
 
 table.custom-table th:nth-child(3),
 table.custom-table td:nth-child(3) {
-  width: 12%;
+  width: 8%;
 }
 
 table.custom-table th:nth-child(4),
 table.custom-table td:nth-child(4) {
-  width: 50%;
+  width: 68%;
 }
 
 /* Link solo nella tabella */
