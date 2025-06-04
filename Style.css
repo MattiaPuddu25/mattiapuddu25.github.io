@@ -130,10 +130,12 @@ li.dropdown {
 
 .right-column {
   float: left;
-  width: 40%;
+  width: 50%;
   box-sizing: border-box;
   padding-left: 1rem;
+  margin-left: 2%; /* spazio tra le colonne */
 }
+
 
 .centering {
   width: 100%;
