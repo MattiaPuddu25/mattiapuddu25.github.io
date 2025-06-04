@@ -135,6 +135,13 @@ li.dropdown {
   padding-left: 1rem;
 }
 
+.centering {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
 /* Popup */
 .popup {
 	position: absolute;
