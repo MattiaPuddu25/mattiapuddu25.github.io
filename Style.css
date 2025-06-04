@@ -133,7 +133,7 @@ li.dropdown {
   width: 50%;
   box-sizing: border-box;
   padding-left: 1rem;
-  margin-left: 2%; /* spazio tra le colonne */
+  margin-left: 2%;
 }
 
 
@@ -229,12 +229,12 @@ table.custom-table td {
 
 table.custom-table th:nth-child(1),
 table.custom-table td:nth-child(1) {
-  width: 14%;
+  width: 16%;
 }
 
 table.custom-table th:nth-child(2),
 table.custom-table td:nth-child(2) {
-  width: 8%;
+  width: 10%;
 }
 
 table.custom-table th:nth-child(3),
@@ -244,7 +244,7 @@ table.custom-table td:nth-child(3) {
 
 table.custom-table th:nth-child(4),
 table.custom-table td:nth-child(4) {
-  width: 68%;
+  width: 64%;
 }
 
 /* Link solo nella tabella */
