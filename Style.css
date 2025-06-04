@@ -239,7 +239,7 @@ table.custom-table td:nth-child(2) {
 
 table.custom-table th:nth-child(3),
 table.custom-table td:nth-child(3) {
-  width: 8%;
+  width: 10%;
 }
 
 table.custom-table th:nth-child(4),
