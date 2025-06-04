@@ -126,6 +126,7 @@ li.dropdown {
   width: 40%;
   box-sizing: border-box;
   padding-right: 1rem;
+  margin-left: 5%;
 }
 
 .right-column {
