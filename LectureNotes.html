@@ -1,19 +1,20 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>Lecture Notes</title>
 <link rel="stylesheet" href="Style.css">
 </head>
 
 <body style="text-align:center">
-<center>
+
+  <center>
 <div class="title">
 	<p style="font-size:25px;">Lecture Notes</p>
 </div>
 </center>
 
 <div id="NavigationBar"></div>
-
 <script>
   fetch('NavigationBar.html')
     .then(res => res.text())
@@ -28,15 +29,19 @@
 Here are several notes I wrote while attending various courses. Next to each file, you'll find the last modified date, a download link,
 and a brief description of the content.
 <br><br>
-<strong>Currently, these notes are in Italian, and some parts are handwritten. I might revise and rewrite them in English in the future;
-    at the same time, I would like to expand them further and possibly consolidate some of them.</strong>
+<strong>
+  Currently, these notes are in Italian, and those marked by an asterisk (*) contain are handwritten parts, or are entirely handwritten.
+  I might revise and rewrite them in English in the future; at the same time, I would like to expand them further and possibly consolidate some of them.
+</strong>
 </div>
 
 <div class="tab-block">
-   <div style="overflow-x: auto;"></div>
-   <br>
-<input type="text" id="searchBothCols" placeholder="Search first and last columns" onkeyup="filterTableBothCols()">
-<br><br>
+  <div style="overflow-x: auto;"></div>
+  
+  <br>
+  <input type="text" id="searchBothCols" placeholder="Search first and last columns" onkeyup="filterTableBothCols()">
+  <br><br>
+  
   <table class="custom-table" id="myTable">
     <thead>
       <tr>
@@ -46,14 +51,18 @@ and a brief description of the content.
         <th></th>
       </tr>
     </thead>
+    
     <tbody>
       <tr>
         <td>A note on dihedral groups</td>
         <td>25/07/2019</td>
-        <td><a href="https://www.icloud.com/iclouddrive/0BGZcooCYHROcUq4PP_aH1MVg#Gruppo_Diedrale">PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-	style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-        <td>Brief overview of dihedral groups and their main properties. For each n &in; &Nopf;, with n &ge; 3, the n-th dihedral group is the group of plane 
-          transformations mapping a regular n-gon onto itself.</td>
+        <td><a href="https://www.icloud.com/iclouddrive/0BGZcooCYHROcUq4PP_aH1MVg#Gruppo_Diedrale">PDF 
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
+          style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
+        <td>
+          Brief overview of dihedral groups and their main properties. For each n &in; &Nopf;, with n &ge; 3, the n-th dihedral group is the group of plane 
+          transformations mapping a regular n-gon onto itself.
+        </td>
       </tr>
 
       <tr>
