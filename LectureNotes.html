@@ -477,17 +477,14 @@
       const tbody = table.tBodies[0];
       const rows = Array.from(tbody.querySelectorAll("tr"));
 
-      // Determine direction (ascending or descending)
       sortDirections[colIndex] = !sortDirections[colIndex];
       const isAscending = sortDirections[colIndex];
 
-      // Sort rows
       rows.sort((a, b) => {
         const aText = a.cells[colIndex].textContent.trim().toLowerCase();
         const bText = b.cells[colIndex].textContent.trim().toLowerCase();
 
         if (colIndex === 1) {
-          // Date in DD/MM/YYYY format → convert to YYYYMMDD for comparison
           const parseDate = (str) => {
             const [d, m, y] = str.split("/");
             return `${y}${m.padStart(2, '0')}${d.padStart(2, '0')}`;
@@ -502,7 +499,6 @@
         }
       });
 
-      // Re-add sorted rows to tbody
       rows.forEach(row => tbody.appendChild(row));
     }
   </script>
@@ -519,14 +515,12 @@
         const cellA = a.cells[colIndex].textContent.trim();
         const cellB = b.cells[colIndex].textContent.trim();
 
-        // Prova a interpretare come date (formato DD/MM/YYYY)
         const dateA = parseDate(cellA);
         const dateB = parseDate(cellB);
 
         if (dateA && dateB) {
           return asc ? dateA - dateB : dateB - dateA;
         } else {
-          // fallback a confronto testuale normale
           const textA = cellA.toLowerCase();
           const textB = cellB.toLowerCase();
           if (textA < textB) return asc ? -1 : 1;
@@ -538,18 +532,16 @@
       rows.forEach(row => tbody.appendChild(row));
     }
 
-    // Funzione ausiliaria per convertire DD/MM/YYYY in oggetto Date
     function parseDate(str) {
       const parts = str.split("/");
       if (parts.length === 3) {
         const [day, month, year] = parts.map(Number);
         if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
-          return new Date(year, month - 1, day); // mese zero-indicizzato
+          return new Date(year, month - 1, day);
         }
       }
       return null;
     }
-
 
     function filterTableBothCols() {
       const input = document.getElementById("searchBothCols");
@@ -562,7 +554,6 @@
         const firstColText = row.cells[0].textContent.toLowerCase();
         const lastColText = row.cells[lastColIndex].textContent.toLowerCase();
 
-        // Mostra la riga se almeno una delle due colonne contiene il filtro
         if (firstColText.includes(filter) || lastColText.includes(filter)) {
           row.style.display = "";
         } else {
@@ -570,7 +561,6 @@
         }
       }
     }
-
   </script>
 
   <script>
