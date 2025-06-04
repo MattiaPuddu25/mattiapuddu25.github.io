@@ -210,6 +210,11 @@ li.dropdown {
   padding: 0 .25rem;
 }
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
 table.custom-table {
   border-collapse: collapse;
   margin: 0;
