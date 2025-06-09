@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title> Home Page of Mattia Puddu </title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body style="text-align:center">
+  <center>
+    <div class="title">
+      <p style="font-size:25px;">Home Page of Mattia Puddu</p>
+    </div>
+  </center>
+
+  <div id="NavigationBar"></div>
+
+  <script>
+    fetch('NavigationBar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('NavigationBar').innerHTML = data;
+      });
+  </script>
+
+  <div class="centering">
+    <div class="left-column text-block" style="text-align: left;">
+      I am currently finishing my mathematics studies at the University of Pisa and will graduate on June 13.
+      <br><br>
+      Starting in August, I will begin a PhD program at RWTH Aachen University in Germany, under the supervision of
+      Professor Daniel Robertz and Professor Annette Bachmayr.
+      My PhD program is titled "Effective Difference Algebra and Difference Algebraic Groups."
+      <br><br>
+      This website contains notes and documents I write in LaTeX or by hand.<br>
+      For any feedback, questions, suggestions, or broken links (sometimes sharing gets interrupted when I update a
+      file),
+      you can contact me at the email address below.<br><br>
+      <h4>Contact:<br>mattiapuddu@icloud.com</h4>
+    </div>
+
+
+    <div class="right-column text-block" style="text-align: left;">
+      <h4 style="font-size: 24px; text-align: center;">LATEST UPDATES</h4>
+      <ul style="padding-left: 1.2rem; margin-top: 1rem;">
+        <li>June 4, 2025 - Website structure updated</li>
+        <li>June 1, 2025 - LaTeX templates updated. They are now designed so that all the files the user is supposed to
+          edit are grouped and clearly marked in a minimal preamble; files that normally should not be modified are
+          similarly marked.</li>
+        <li>August 14, 2024 - Updated the solution files for the Math Olympiad team competitions in Cesenatico: now all
+          solutions from 2006 to 2024 are included.</li>
+      </ul>
+      <br>
+      <a href="OldUpdates.txt">Older updates</a>
+    </div>
+  </div>
+
+  <!-- Default Statcounter code for My website
+https://mattiapuddu25.github.io/index.html -->
+  <script type="text/javascript">
+    var sc_project = 13141570;
+    var sc_invisible = 1;
+    var sc_security = "8b991424"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="web statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/13141570/0/8b991424/1/" alt="web statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+  <!-- End of Statcounter Code -->
+</body>
+
+</html>

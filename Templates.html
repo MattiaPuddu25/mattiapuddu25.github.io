@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Templates LaTeX</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body style="text-align:center">
+  <center>
+    <div class="title">
+      <p style="font-size:25px;">Templates LaTeX</p>
+    </div>
+  </center>
+
+  <div id="NavigationBar"></div>
+
+  <script>
+    fetch('NavigationBar.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('NavigationBar').innerHTML = data;
+      });
+  </script>
+
+  <br><br>
+  <div class="large-block" style="margin-top: 2rem;">
+    Over the years, I have gained considerable experience in using LaTeX, and I now systematically rely on these
+    templates for books, articles, and beamer
+    presentations. These templates have been tested on both TeXPad and Overleaf.
+    <br><br>
+    In the latest version (06/2025), several updates were made: the preamble is now minimal, and the parts that need to
+    be modified by the user
+    are contained in separate files and are clearly marked. Everything else, in principle, should not be changed unless
+    the user knows exactly
+    what they are doing.
+    <br><br>
+    All templates, once compiled, display in the PDF file the various commands and features that I have added.
+    In the case of the beamer template, some specific functionalities of the beamer class are also illustrated.
+  </div>
+
+  <br>
+
+  <div class="pair-container">
+    <div class="text-left text-block">
+      My Book Template.
+    </div>
+    <div class="link-right large-block">
+      <h4>Click <a href="https://www.overleaf.com/latex/templates/book-template/bykqndqgncbd">HERE</a> to see the
+        template in Overleaf, and
+        <a href="/Templates/BookTemplate.pdf">HERE</a> to download the compiled PDF.
+      </h4>
+    </div>
+  </div>
+
+
+  <div class="pair-container">
+    <div class="text-left text-block">
+      My Article Template.
+    </div>
+    <div class="link-right large-block">
+      <h4>Click <a href="https://www.overleaf.com/latex/templates/articletemplate/tcqpszvzwjgq">HERE</a> to see the
+        template in Overleaf, and
+        <a href="/Templates/ArticleTemplate.pdf">HERE</a> to download the compiled PDF.
+      </h4>
+    </div>
+  </div>
+
+
+  <div class="pair-container">
+    <div class="text-left text-block">
+      My Beamer Template.
+    </div>
+    <div class="link-right large-block">
+      <h4>Click <a href="https://www.overleaf.com/latex/templates/beamertemplate/jczqjdrzzmfc">HERE</a> to see the
+        template in Overleaf, and
+        <a href="/Templates/BeamerTemplate.pdf">HERE</a> to download the compiled PDF.
+      </h4>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="text-block" style="margin-top: 2rem;">
+    <h4>Contact:<br>
+      mattiapuddu@icloud.com</h4>
+  </div>
+
+  <!-- Default Statcounter code for My website
+https://mattiapuddu25.github.io/index.html -->
+  <script type="text/javascript">
+    var sc_project = 13141570;
+    var sc_invisible = 1;
+    var sc_security = "8b991424"; 
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+  <noscript>
+    <div class="statcounter"><a title="web statistics" href="https://statcounter.com/" target="_blank"><img
+          class="statcounter" src="https://c.statcounter.com/13141570/0/8b991424/1/" alt="web statistics"
+          referrerPolicy="no-referrer-when-downgrade"></a></div>
+  </noscript>
+  <!-- End of Statcounter Code -->
+</body>
+
+</html>

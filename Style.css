@@ -1,0 +1,286 @@
+/* Link colors */
+a:link, a:visited {
+	color: orange;
+	text-decoration: none;
+}
+
+/* Base styling */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+	background: url(Background_Images/Background.jpeg) no-repeat;
+	background-size: cover;
+}
+
+/* Container for all main blocks */
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem;
+}
+
+/* Generic block style */
+.text-block, .contacts, .updates, .title, .access {
+	background-color: #333;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+	padding: .5rem;
+	width: 90%;
+	max-width: 700px;
+	margin: .5rem auto;
+	box-sizing: border-box;
+}
+
+/* Large block style */
+.large-block {
+	background-color: #333;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+	padding: .5rem;
+	width: 100%;
+	max-width: 1400px;
+	margin: 1rem auto;
+	box-sizing: border-box;
+}
+
+.tab-block {
+	background-color: #333;
+	color: white;
+	position: relative;
+	border-radius: 10px;
+	padding: 0;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	max-width: 1600px;
+	overflow-x: auto;
+	align-self: center;
+	display: block;
+}
+
+.tab-block table {
+  width: 95%;
+  table-layout: fixed;
+}
+
+/* Navigation bar */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	background-color: #333;
+	border-radius: 5px;
+}
+
+li {
+	margin: 0.5rem;
+}
+
+li a, .dropbtn {
+	color: white;
+	padding: 1rem 1.5rem;
+	text-decoration: none;
+	font-size: 1.1rem;
+	display: inline-block;
+	background-color: #333;
+	border-radius: 5px;
+}
+
+/* Dropdown */
+li.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 160px;
+	box-shadow: 0px 16px 16px rgba(0,0,0,0.25);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: orange;
+	padding: 10px;
+	display: block;
+	text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.left-column {
+  float: left;
+  width: 35%;
+  box-sizing: border-box;
+  padding-right: .5rem;
+  margin-left: 2%;
+}
+
+.right-column {
+  float: left;
+  width: 60%;
+  box-sizing: border-box;
+  padding-left: .5rem;
+  margin-left: 2%;
+}
+
+
+.centering {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Popup */
+.popup {
+	position: absolute;
+	cursor: pointer;
+	background-color: #333;
+	color: orange;
+	border-radius: 5px;
+	padding: 5px 10px;
+	z-index: 1;
+}
+
+.popup .popuptext {
+	visibility: hidden;
+	width: 150px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 8px;
+	padding: 8px 0;
+	position: absolute;
+	bottom: 25%;
+	left: 130%;
+	margin-left: -150px;
+}
+
+.popup .show {
+	visibility: visible;
+	animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+	.text-block, .large-block, .tab-block, .contacts, .title, .access {
+		width: 95%;
+		font-size: 16px;
+		padding: 1rem;
+	}
+
+	li a, .dropbtn {
+		font-size: 1rem;
+		padding: 0.5rem 1rem;
+	}
+}
+
+.pair-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.text-left, .link-right {
+  width: 48%;
+  box-sizing: border-box;
+  /* aggiungi padding se vuoi */
+  padding: 0 .25rem;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table.custom-table {
+  border-collapse: collapse;
+  margin: 0;
+  background-color: #333;
+  color: white;
+  width: 100%;
+  max-width: 1600px;
+  z-index: 10;
+  position: relative;
+}
+
+table.custom-table th,
+table.custom-table td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: left;
+}
+
+table.custom-table th:nth-child(1),
+table.custom-table td:nth-child(1) {
+  width: 20%;
+}
+
+table.custom-table th:nth-child(2),
+table.custom-table td:nth-child(2) {
+  width: 16%;
+}
+
+table.custom-table th:nth-child(3),
+table.custom-table td:nth-child(3) {
+  width: 12%;
+}
+
+table.custom-table th:nth-child(4),
+table.custom-table td:nth-child(4) {
+  width: 50%;
+}
+
+/* Link solo nella tabella */
+table.custom-table a {
+  color: orange;
+  text-decoration: none;
+}
+
+table.custom-table a:hover {
+  text-decoration: underline;
+}
+
+#searchBothCols {
+  width: 50%;        /* occupa tutta la larghezza del contenitore */
+  max-width: 600px;   /* limite massimo di larghezza */
+  padding: 0.5rem 1rem; /* spazio interno più ampio */
+  font-size: 1.2rem;  /* testo più grande */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 1rem; /* margine sotto per distanziare dalla tabella */
+}
+
+#extraText {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+}
+
+#extraText.show {
+  display: block;
+  max-height: 1000px; /* abbastanza alto da contenere il testo */
+}
