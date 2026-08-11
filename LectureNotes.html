@@ -25,18 +25,82 @@
 
   <br><br>
 
-  <div class="large-block" style="margin-top: 2rem;">
+<div class="large-block" style="margin-top: 2rem;">
     Here are several notes I wrote while attending various courses. Next to each file, you'll find the last modified
+    date, a download link,
+    and a brief description of the content.
+    <br><br>
+  </div>
+
+  <div class="tab-block">
+    <div style="overflow-x: auto;"></div>
+
+    <!--
+    <br>
+    <input type="text" id="searchBothCols" placeholder="Search" onkeyup="filterTableAllCols()">
+    <br><br>
+    -->
+
+    <div class="table-container">
+      <table class="custom-table" id="myTable">
+        <thead>
+          <tr>
+            <th>TITLE</th>
+            <th onclick="sortTable(1)"> &#x25B2;&#x25BC;</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- Modular Forms -->
+          <tr>
+            <td>Modular Forms</td>
+            <td>11/08/2026</td>
+            <td><a href="https://mattiapuddu25.github.io/Modular-Forms/ModularForms.pdf">PDF <img
+                  src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK flag"
+                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
+            <td>These notes were originally based on the course taught by Professors Andrea Maffei and Davide Lombardo in the academic year 2020/2021 at the University of Pisa.
+              The present version contains substantial additional material related to the main topics, which I have included according to my own interests.<br><br>
+              The <a href="https://github.com/MattiaPuddu25/Modular-Forms">GitHub repository</a> also contains the Julia/OSCAR code supporting the the algorithmic computations
+              associated with the theoretical objects introduced in the notes. Each <code>.jl</code> file includes documentation for the implemented function together with
+              several examples of their use.
+              <br><br>
+              Main topics of the notes:
+              <button id=toggleText3 type="button">Show</button>
+              <div id="extraText3" style="display:none; margin-top: 1rem;">
+                - M&ouml;bius transformations, hyperbolic geometry, Fuchsian groups and Riemann surfaces.
+                - Classical modular forms for <span
+                  style="font-family: serif; font-weight: normal; font-style: normal;">SL</span><sub>2</sub>(&Zopf;): <i>q</i>-expansions, Eisenstein series, cusp forms,
+                  the modular discriminant, the <i>j</i>-invariant, and the graded algebra of modular forms.<br>
+                - Number-theoretic aspects of modular forms: Poisson summation, Bernoulli numbers, theta functions and lattices, infinite products, the Ramanujan-Serre operators, and
+                applications to sum of squares.<br>
+                - Congruence subgroups and modular curves: cusp points, compactification, genus formulas, modular forms of higher level, the <i>q</i>-expansion principle, Sturm's bound, and the
+                Petersson product.<br>
+                - Representation theory and Hecke theory: group representations, Haar measures, Hecke algebras, Hecke and diamond operators, and the theory of old and new cusp forms.<br>
+                - L-functions associated with modular forms: Mellin transforms, Dirichlet series, Euler products, Dirichlet characters and functional equations.<br>
+                - Complex tori and elliptic curves: elliptic functions, periods, torsion points, and the passage between lattices and projective cubic curves.
+                - Moduli interpretations of modular curves and Hecke operators, modular polynomials, Hauptmoduls and explicit equations for &Xopf;<sub>0</sub>(n)
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div class="large-block" style="margin-top: 2rem;">
+    Here are several other notes I wrote while attending various courses. Next to each file, you'll find the last modified
     date, a download link,
     and a brief description of the content.
     <br><br>
     <strong>
       Currently, these notes are in Italian, and those marked by an asterisk (*) contain handwritten parts, or are
       entirely handwritten.
-      I might revise and rewrite them in English in the future; at the same time, I would like to expand them further
+      I might (and intend to) revise and rewrite them in English in the future; at the same time, I would like to expand them further
       and possibly consolidate some of them.
-      I am currently rewriting the notes about "Modular Forms" in English. See the note below.
-      
     </strong>
   </div>
 
@@ -141,40 +205,6 @@
                 - Arithmetic functions. Dirichlet series and infinite products. Asymptotic behavior of arithmetic
                 functions. Mertens and Chebyshev theorems.
                 Dirichlet theorem on prime numbers in arithmetic progressions.
-              </div>
-            </td>
-          </tr>
-          <!-- Modular Forms -->
-          <tr>
-            <td>Modular Forms</td>
-            <td>21/01/2022</td>
-            <td><a href="https://www.icloud.com/iclouddrive/0NNZFYBLqtyxhMmwimYuZnk3Q#FM">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>My notes from the course taught by professors Andrea Maffei and Davide Lombardo in the academic year
-              2020/2021.<br>
-              <p style="color:#cc0000;">I am currently rewriting these notes in English, correcting several misprints and fixing things 
-                that were written too hastily or poorly. I am also adding some material here and there. I do not know when this new version
-                will be ready, since I do this in my spare time. From time to time I will update the italian version to fix parts with errors or
-                omissions that I find relevant.</p><br>
-              Main topics of the course:
-              <button id=toggleText3 type="button">Show</button>
-              <div id="extraText3" style="display:none; margin-top: 1rem;">
-                - The modular group <span
-                  style="font-family: serif; font-weight: normal; font-style: normal;">SL</span><sub>2</sub>(&Zopf;).
-                Classical modular forms, Fourier expansions. Weight of a modular form. Examples: Eisenstein series, the
-                discriminant. Modular forms of arbitrary weight form
-                a polynomial algebra in the variables E_4, E_6.<br>
-                - Classical examples: theta series associated with plane lattices. Representations of integers as sums
-                of
-                squares.<br>
-                - Generalization to congruence subgroups of <span
-                  style="font-family: serif; font-weight: normal; font-style: normal;">SL</span><sub>2</sub>(&Zopf;).
-                Geometric interpretation.<br>
-                - Hecke operators, recurrence relations. Properties of Ramanujan's tau function. The Petersson inner
-                product. Simultaneous eigenvectors for the Hecke operators.<br>
-                - L-functions attached to modular forms. Functional equation in the cuspidal case. Euler product
-                decomposition of the L-function attached to an eigenform.
               </div>
             </td>
           </tr>
