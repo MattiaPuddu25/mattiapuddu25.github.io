@@ -1,64 +1,59 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title> Home Page of Mattia Puddu </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Mattia Puddu</title>
   <link rel="stylesheet" href="Style.css">
+  <script src="site.js" defer></script>
 </head>
-
-<body style="text-align:center">
-  <center>
-    <div class="title">
-      <p style="font-size:25px;">Home Page of Mattia Puddu</p>
-    </div>
-  </center>
-
-  <div id="NavigationBar"></div>
-
-  <script>
-    fetch('NavigationBar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('NavigationBar').innerHTML = data;
-      });
-  </script>
-
-  <div class="centering">
-    <div class="left-column text-block" style="text-align: left;">
-      I am a PhD student at RWTH Aachen University, under the supervision of
-      Professor Daniel Robertz and Dr. Annette Bachmayr.
-      My PhD project, entitled "Effective Difference Algebra and Difference Algebraic Groups", is funded by the SFB-TRR 195.
-      <br><br>
-      I completed my studies at the University of Pisa on June 13, 2025.
-      <br><br>
-      This website contains notes and documents I write in LaTeX or by hand.<br>
-      For any feedback, questions, suggestions, or broken links (sometimes sharing gets interrupted when I update a
-      file),
-      you can contact me at the email address below.<br><br>
-      <h4>Contact:<br>mattiapuddu@icloud.com <br> mattia.puddu@rwth-aachen.de</h4>
-    </div>
-
-
-    <div class="right-column text-block" style="text-align: left;">
-      <h4 style="font-size: 24px; text-align: center;">LATEST UPDATES</h4>
-      <ul style="padding-left: 1.2rem; margin-top: 1rem;">
-        <li>August 11, 2026 -  Updated the new version of the notes "Modular Forms" in a new GitHub repository, including all the Julia/OSCAR code for the 
-          algorithmic computations</li>
-        <li>June 8, 2025 -  Updated the solution files for the Math Olympiad Semifinals team competitions in Cesenatico: now all
-          solutions from 2006 to 2025 are included</li>
-        <li>June 4, 2025 - Website structure updated</li>
-        <li>June 1, 2025 - LaTeX templates updated. They are now designed so that all the files the user is supposed to
-          edit are grouped and clearly marked in a minimal preamble; files that normally should not be modified are
-          similarly marked.</li>
-        <li>August 14, 2024 - Updated the solution files for the Math Olympiad team competitions in Cesenatico: now all
-          solutions from 2006 to 2024 are included.</li>
-      </ul>
-      <br>
-      <a href="OldUpdates.txt">Older updates</a>
-    </div>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="site-layout">
+  <header class="site-header">
+    <a class="site-name" href="index.html">Mattia Puddu</a>
+    <p class="affiliation">PhD student in Mathematics<br>RWTH Aachen University</p>
+    <nav id="NavigationBar" class="site-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a>
+<a href="GitHub.html">GitHub</a>
+<a href="Preprints.html">Preprints</a>
+<a href="LectureNotes.html">Mathematical Notes</a>
+<a href="MathOlympiads.html">Math Olympiads</a>
+<a href="BachelorThesis.html">Bachelor’s Thesis</a>
+<a href="MasterThesis.html">Master’s Thesis</a>
+<a href="CV.pdf">CV</a>
+<a href="Templates.html">LaTeX Templates</a></nav>
+  </header>
+  <main id="main-content"><h1 class="sr-only">Home</h1>
+<div class="home-grid">
+  <div class="biography">
+    <p>I am a PhD student at RWTH Aachen University, under the supervision of Professor Daniel Robertz and Doctor Annette Bachmayr.</p>
+    <p>My PhD project, <em>Effective Difference Algebra and Difference Algebraic Groups</em>, is funded by the SFB-TRR 195.</p>
+    <p>I completed my studies at the University of Pisa on June 13, 2025.</p>
+    <p class="muted">Here you can find my preprints, code and mathematical notes, including materials for mathematics competitions, and the LaTeX templates I use.</p>
   </div>
+  <aside class="contact" aria-label="Contact information">
+    <h2>Contact</h2>
+    <p><a href="mailto:mattia.puddu@rwth-aachen.de">mattia.puddu@rwth-aachen.de</a><br>
+       <a href="mailto:mattiapuddu@icloud.com">mattiapuddu@icloud.com</a></p>
+    <p class="muted">Feedback, questions and suggestions are always welcome.</p>
+  </aside>
+</div>
+<section class="updates"><h2>Latest updates</h2>
+  <!-- Keep the five most recent updates, newest first. -->
+  <ul class="update-list">
+    <li><time datetime="2026-11-05">05 Nov 2026</time><p>Added the Preprints and GitHub sections and updated the website structure.</p></li>
+    <li><time datetime="2026-08-11">11 Aug 2026</time><p>Updated the new version of the notes &quot;Modular Forms&quot; in a new GitHub repository, including all the Julia/OSCAR code for the algorithmic computations</p></li>
+    <li><time datetime="2025-06-08">08 Jun 2025</time><p>Updated the solution files for the Math Olympiad Semifinals team competitions in Cesenatico: now all solutions from 2006 to 2025 are included</p></li>
+    <li><time datetime="2025-06-04">04 Jun 2025</time><p>Website structure updated</p></li>
+    <li><time datetime="2025-06-01">01 Jun 2025</time><p>LaTeX templates updated. They are now designed so that all the files the user is supposed to edit are grouped and clearly marked in a minimal preamble; files that normally should not be modified are similarly marked.</p></li>
+  </ul>
+</section></main>
+  <footer class="site-footer"><span>Mattia Puddu · Mathematics</span>
+<div class="footer-links"><a class="github-link" href="https://github.com/MattiaPuddu25"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a>
+<a href="mailto:mattia.puddu@rwth-aachen.de">mattia.puddu@rwth-aachen.de</a></div></footer>
+</div>
 
-  <!-- Default Statcounter code for My website
+<!-- Default Statcounter code for My website
 https://mattiapuddu25.github.io/index.html -->
   <script type="text/javascript">
     var sc_project = 13141570;
@@ -73,5 +68,4 @@ https://mattiapuddu25.github.io/index.html -->
   </noscript>
   <!-- End of Statcounter Code -->
 </body>
-
 </html>

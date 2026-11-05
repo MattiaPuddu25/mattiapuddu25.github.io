@@ -1,77 +1,50 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Lecture Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mathematical Notes | Mattia Puddu</title>
   <link rel="stylesheet" href="Style.css">
+  <script src="site.js" defer></script>
 </head>
-
-<body style="text-align:center">
-
-  <center>
-    <div class="title">
-      <p style="font-size:25px;">Lecture Notes</p>
-    </div>
-  </center>
-
-  <div id="NavigationBar"></div>
-  <script>
-    fetch('NavigationBar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('NavigationBar').innerHTML = data;
-      });
-  </script>
-
-  <br><br>
-
-<div class="large-block" style="margin-top: 2rem;">
-    Here are several notes I wrote while attending various courses. Next to each file, you'll find the last modified
-    date, a download link,
-    and a brief description of the content.
-    <br><br>
-  </div>
-
-  <div class="tab-block">
-    <div style="overflow-x: auto;"></div>
-
-    <!--
-    <br>
-    <input type="text" id="searchBothCols" placeholder="Search" onkeyup="filterTableAllCols()">
-    <br><br>
-    -->
-
-    <div class="table-container">
-      <table class="custom-table" id="myTable">
-        <thead>
-          <tr>
-            <th>TITLE</th>
-            <th onclick="sortTable(1)"> &#x25B2;&#x25BC;</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <!-- Modular Forms -->
-          <tr>
-            <td>Modular Forms</td>
-            <td>11/08/2026</td>
-            <td><a href="https://mattiapuddu25.github.io/Modular-Forms/ModularForms.pdf">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>These notes were originally based on the course taught by Professors Andrea Maffei and Davide Lombardo in the academic year 2020/2021 at the University of Pisa.
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="site-layout">
+  <header class="site-header">
+    <a class="site-name" href="index.html">Mattia Puddu</a>
+    <p class="affiliation">PhD student in mathematics<br>RWTH Aachen University</p>
+    <nav id="NavigationBar" class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a>
+<a href="GitHub.html">GitHub</a>
+<a href="Preprints.html">Preprints</a>
+<a href="LectureNotes.html" aria-current="page">Mathematical Notes</a>
+<a href="MathOlympiads.html">Math Olympiads</a>
+<a href="BachelorThesis.html">Bachelor’s Thesis</a>
+<a href="MasterThesis.html">Master’s Thesis</a>
+<a href="CV.pdf">CV</a>
+<a href="Templates.html">LaTeX Templates</a></nav>
+  </header>
+  <main id="main-content"><h1 class="sr-only">Mathematical Notes</h1>
+<p class="page-intro">Here are several notes I wrote while attending various courses, together with further explorations in mathematics. Each entry includes the last modified date, download links and a description of the content.</p>
+<p class="note-language">Most of these notes are in Italian; <em>Modular Forms</em> is in English. An asterisk (*) marks material that is partly or entirely handwritten. I intend to revise and expand the notes in English, and possibly consolidate some of them.</p>
+<div class="notes-controls">
+<label class="search-field" for="notes-search">Search notes<input id="notes-search" type="search" placeholder="Title, topic or description" autocomplete="off"></label>
+<label for="notes-sort">Sort by<select id="notes-sort"><option value="original">Original order</option><option value="newest">Most recently updated</option><option value="oldest">Least recently updated</option><option value="title">Title A–Z</option></select></label>
+<button id="notes-reset" type="button">Reset</button>
+</div>
+<p id="notes-status" class="note-meta" role="status" aria-live="polite"></p>
+<div id="notes-list"><article class="note-entry" data-title="Modular Forms" data-date="2026-08-11">
+<div><h2>Modular Forms</h2><p class="note-meta">Updated 11/08/2026<br>English</p><div class="note-links"><a href="https://mattiapuddu25.github.io/Modular-Forms/ModularForms.pdf">PDF </a></div></div>
+<div class="note-description">These notes were originally based on the course taught by Professors Andrea Maffei and Davide Lombardo in the academic year 2020/2021 at the University of Pisa.
               The present version contains substantial additional material related to the main topics, which I have included according to my own interests.<br><br>
               <a href="https://github.com/MattiaPuddu25/Modular-Forms">This GitHub repository</a> also contains the Julia/OSCAR code supporting the algorithmic computations
               associated with the theoretical objects introduced in the notes. Each <code>.jl</code> file includes documentation for the implemented function together with
               several examples of their use.
               <br><br>
               Main topics of the notes:
-              <button id=toggleText3 type="button">Show</button>
-              <div id="extraText3" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - M&ouml;bius transformations, hyperbolic geometry, Fuchsian groups and Riemann surfaces.
-                - Classical modular forms for <span
-                  style="font-family: serif; font-weight: normal; font-style: normal;">SL</span><sub>2</sub>(&Zopf;): <i>q</i>-expansions, Eisenstein series, cusp forms,
+                - Classical modular forms for <span style="font-family: serif; font-weight: normal; font-style: normal;">SL</span><sub>2</sub>(&Zopf;): <i>q</i>-expansions, Eisenstein series, cusp forms,
                   the modular discriminant, the <i>j</i>-invariant, and the graded algebra of modular forms.<br>
                 - Number-theoretic aspects of modular forms: Poisson summation, Bernoulli numbers, theta functions and lattices, infinite products, the Ramanujan-Serre operators, and
                 applications to sum of squares.<br>
@@ -81,95 +54,35 @@
                 - L-functions associated with modular forms: Mellin transforms, Dirichlet series, Euler products, Dirichlet characters and functional equations.<br>
                 - Complex tori and elliptic curves: elliptic functions, periods, torsion points, and the passage between lattices and projective cubic curves.
                 - Moduli interpretations of modular curves and Hecke operators, modular polynomials, Hauptmoduls and explicit equations for &Xopf;<sub>0</sub>(n)
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-
-
-  <div class="large-block" style="margin-top: 2rem;">
-    <strong>
-      Currently, these notes are in Italian, and those marked by an asterisk (*) contain handwritten parts, or are
-      entirely handwritten.
-      I might (and intend to) revise and rewrite them in English in the future; at the same time, I would like to expand them further
-      and possibly consolidate some of them.
-    </strong>
-  </div>
-
-  <div class="tab-block">
-    <div style="overflow-x: auto;"></div>
-
-    <br>
-    <input type="text" id="searchBothCols" placeholder="Search" onkeyup="filterTableAllCols()">
-    <br><br>
-
-    <div class="table-container">
-      <table class="custom-table" id="myTable">
-        <thead>
-          <tr>
-            <th>TITLE</th>
-            <th onclick="sortTable(1)"> &#x25B2;&#x25BC;</th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <!-- Dihedral groups -->
-          <tr>
-            <td>A note on dihedral groups</td>
-            <td>25/07/2019</td>
-            <td><a href="https://www.icloud.com/iclouddrive/0BGZcooCYHROcUq4PP_aH1MVg#Gruppo_Diedrale">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>
+              </details>
+            </div></article><article class="note-entry" data-title="A note on dihedral groups" data-date="2019-07-25">
+<div><h2>A note on dihedral groups</h2><p class="note-meta">Updated 25/07/2019<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/0BGZcooCYHROcUq4PP_aH1MVg#Gruppo_Diedrale">PDF
+                </a></div></div>
+<div class="note-description">
               Brief overview of dihedral groups and their main properties. For each n &in; &Nopf;, with n &ge; 3, the
               n-th
               dihedral group is the group of plane
               transformations mapping a regular n-gon onto itself.
-            </td>
-          </tr>
-          <!-- Alternating groups -->
-          <tr>
-            <td>Simplicity of alternating groups</td>
-            <td>16/07/2022</td>
-            <td><a href="https://www.icloud.com/iclouddrive/08b8O2CUweqm69fNHeukHyE5g#Gruppo_Alterno">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>
+            </div></article><article class="note-entry" data-title="Simplicity of alternating groups" data-date="2022-07-16">
+<div><h2>Simplicity of alternating groups</h2><p class="note-meta">Updated 16/07/2022<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/08b8O2CUweqm69fNHeukHyE5g#Gruppo_Alterno">PDF
+                </a></div></div>
+<div class="note-description">
               A proof of the simplicity, for n>4, of the alternating group on n elements.
-            </td>
-          </tr>
-          <!-- Cantor set -->
-          <tr>
-            <td>A note on the Cantor set</td>
-            <td>13/01/2019</td>
-            <td><a href="https://www.icloud.com/iclouddrive/0FTozzamrLXPFenicKxWiPOvQ#Cantor">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>
+            </div></article><article class="note-entry" data-title="A note on the Cantor set" data-date="2019-01-13">
+<div><h2>A note on the Cantor set</h2><p class="note-meta">Updated 13/01/2019<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/0FTozzamrLXPFenicKxWiPOvQ#Cantor">PDF
+                </a></div></div>
+<div class="note-description">
               A description of the Cantor set using the representation of real numbers in base 3.
-            </td>
-          </tr>
-          <!-- Lie -->
-          <tr>
-            <td>Lie Algebras and Lie Groups</td>
-            <td>16/06/2021</td>
-            <td><a href="https://www.icloud.com/iclouddrive/0VmsdmEdeUAt4LdeIKgkTW7wg#AGLie">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>
+            </div></article><article class="note-entry" data-title="Lie Algebras and Lie Groups" data-date="2021-06-16">
+<div><h2>Lie Algebras and Lie Groups</h2><p class="note-meta">Updated 16/06/2021<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/0VmsdmEdeUAt4LdeIKgkTW7wg#AGLie">PDF
+                </a></div></div>
+<div class="note-description">
               My notes from the course taught by professors Giovanni Gaiffi and Enrico Le Donne in the academic year
               2018/2019.<br>
-              Main topics of the course: <button id=toggleText1 type="button">Show</button>
-              <div id="extraText1" style="display:none; margin-top: 1rem;">
+              Main topics of the course:
+              <details><summary>Topics</summary>
                 - Lie Algebras: definitions, homomorphisms and first properties. Killing form.<br>
-                - Representation theory of Lie algebras. Casimir element. Weyl Theorem. The algebra <span
-                  style="font-family: serif; font-style: italic;">sl</span>(2,K)
+                - Representation theory of Lie algebras. Casimir element. Weyl Theorem. The algebra <span style="font-family: serif; font-style: italic;">sl</span>(2,K)
                 and its irreducible representations. Standard cyclic modules. Weight lattice and examples.<br>
                 - Root systems: Dynkin diagrams and their complete classification. Weyl groups. Connection between Lie
                 Algebras and root system: Lie theorem and
@@ -179,20 +92,14 @@
                 <span style="font-family: serif; font-weight: normal; font-style: normal;">GL</span>(n,&Ropf;).
                 One-parameter subgroups and subalgebras.
                 Exponential map. Adjoint representation. Baker-Campbell-Hausdorff formula.
-              </div>
-            </td>
-          </tr>
-          <!-- TNE -->
-          <tr>
-            <td>Elementary Number Theory</td>
-            <td>25/06/2024</td>
-            <td><a href="https://www.icloud.com/iclouddrive/01fWql1-ta-3egBRxl0897Ejg#TNE">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>My notes from the course taught by professor Giuseppe Puglisi in the academic year 2017/2018.<br>
+              </details>
+            </div></article><article class="note-entry" data-title="Elementary Number Theory" data-date="2024-06-25">
+<div><h2>Elementary Number Theory</h2><p class="note-meta">Updated 25/06/2024<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/01fWql1-ta-3egBRxl0897Ejg#TNE">PDF
+                </a></div></div>
+<div class="note-description">My notes from the course taught by professor Giuseppe Puglisi in the academic year 2017/2018.<br>
               Main topics of the course:
-              <button id=toggleText2 type="button">Show</button>
-              <div id="extraText2" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - The problem of the distribution of primes: the Prime Number Theorem. Lagrange's four-squares theorem.
                 Quadratic residues. The quadratic reciprocity law. <br>
                 - Quadratic congruences and congruences of higher degree. The structure of multiplicative groups modulo
@@ -201,50 +108,29 @@
                 - Arithmetic functions. Dirichlet series and infinite products. Asymptotic behavior of arithmetic
                 functions. Mertens and Chebyshev theorems.
                 Dirichlet theorem on prime numbers in arithmetic progressions.
-              </div>
-            </td>
-          </tr>
-          <!-- ETA -->
-          <tr>
-            <td>Elements of Algebraic Topology (*)</td>
-            <td>12/07/2022</td>
-            <td><a href="https://www.icloud.com/iclouddrive/03a8gN7VwZCbzN-JMreg_2-CQ#ETA">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>My notes from the course taught by professor Filippo Callegaro in the academic year 2021/2022.<br>
+              </details>
+            </div></article><article class="note-entry" data-title="Elements of Algebraic Topology (*)" data-date="2022-07-12">
+<div><h2>Elements of Algebraic Topology (*)</h2><p class="note-meta">Updated 12/07/2022<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/03a8gN7VwZCbzN-JMreg_2-CQ#ETA">PDF </a></div></div>
+<div class="note-description">My notes from the course taught by professor Filippo Callegaro in the academic year 2021/2022.<br>
               Main topics of the course:
-              <button id=toggleText4 type="button">Show</button>
-              <div id="extraText4" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - Singular homology: construction and basic properties. Applications. CW-complexes, cellular
                 homology.<br>
                 - Cohomology ring, cup product, Poincaré duality.<br>
                 - Homotopy groups: construction and basic properties. Cellular approximation. Homotopy groups of
                 spheres.
-              </div>
-            </td>
-          </tr>
-          <!-- Elements of Complex Analysis -->
-          <tr>
-            <td>Elements of Complex Analysis (*)</td>
-            <td>21/02/2022</td>
-            <td colspan="2" style="padding: 0; margin: 0; border: 1px solid white;">
-              <table style="width: 100%; border-collapse: separate; border-spacing: 4px; table-layout: fixed;">
-                <colgroup>
-                  <col style="width: 16%;">
-                  <col style="width: 80%;">
-                </colgroup>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
-                    <a href="https://www.icloud.com/iclouddrive/0ca1a8r_mQ7lsX6zF22kdc7PQ#EAC">PDF <img
-                        src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+              </details>
+            </div></article><article class="note-entry" data-title="Elements of Complex Analysis (*)" data-date="2022-02-21">
+<div><h2>Elements of Complex Analysis (*)</h2><p class="note-meta">Updated 21/02/2022<br>Italian</p></div>
+<div class="note-description"><div class="note-version"><div class="note-links">
+                    <a href="https://www.icloud.com/iclouddrive/0ca1a8r_mQ7lsX6zF22kdc7PQ#EAC">PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     My notes from the course taught by professor Marco Abate in the academic year 2020/2021.<br>
                     Main topics of the course:
-                    <button id=toggleText5 type="button">Show</button>
-                    <div id="extraText5" style="display:none; margin-top: 1rem;">
+
+                    <details><summary>Topics</summary>
                       - Complements of complex analysis in one variable: compact-open topology and topology of uniform
                       convergence on compact sets. Convergence of sequences of holomorphic functions; compactness in the
                       space of holomorphic functions.<br>
@@ -262,61 +148,34 @@
                       and
                       its
                       solution.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                    </details>
+                  </div></div><div class="note-version"><div class="note-links">
                     <a href="https://www.icloud.com/iclouddrive/0cehIAmOpjKUZLdk2jwKi71wQ#EAC-DefEn">
-                      PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                      PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     A list of definitions and statements from the course.
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div></div><div class="note-version"><div class="note-links">
                     <a href="https://www.icloud.com/iclouddrive/0f5JJQfb2uxh6SPS0GELEdNxw#Seminario_EAC">
-                      PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                      PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     Seminar presented at the exam, concerning zeros of bounded holomorphic functions. Includes proofs of
                     some
                     inequalities due to Feldman and Gelfond.<br>
                     The file also contains some theoretical reminders from the course, concerning sheaves of germs and
                     analytic
                     continuation, harmonic functions, infinite products and automorphisms of the disk.
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <!-- EGA -->
-          <tr>
-            <td>Elements of Algebraic Geometry (*)</td>
-            <td>18/08/2024</td>
-            <td colspan="2" style="padding: 0; margin: 0; border: 1px solid white;">
-              <table style="width: 100%; border-collapse: separate; border-spacing: 4px; table-layout: fixed;">
-                <colgroup>
-                  <col style="width: 16%;">
-                  <col style="width: 80%;">
-                </colgroup>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
-                    <a href="https://www.icloud.com/iclouddrive/063yYegeTWYXPAyslcHK4kZUA#EGA">PDF <img
-                        src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                  </div></div></div></article><article class="note-entry" data-title="Elements of Algebraic Geometry (*)" data-date="2024-08-18">
+<div><h2>Elements of Algebraic Geometry (*)</h2><p class="note-meta">Updated 18/08/2024<br>Italian</p></div>
+<div class="note-description"><div class="note-version"><div class="note-links">
+                    <a href="https://www.icloud.com/iclouddrive/063yYegeTWYXPAyslcHK4kZUA#EGA">PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     My notes from the course taught by professor Rita Pardini in the academic year 2020/2021.<br>
                     Main topics of the course:
-                    <button id=toggleText6 type="button">Show</button>
-                    <div id="extraText6" style="display:none; margin-top: 1rem;">
+
+                    <details><summary>Topics</summary>
                       - Projective geometry. Subspaces, projective transformations. Affine charts. Cross-ratio. Plane
                       curves,
                       Bézout's theorem. Plane cubics. Nullstellensatz.<br>
@@ -326,59 +185,32 @@
                       an
                       irreducible quasi-projective variety.<br>
                       - Tangent space and singular points.
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                    </details>
+                  </div></div><div class="note-version"><div class="note-links">
                     <a href="https://www.icloud.com/iclouddrive/01fqV2T0-_S3JjyFrs81-g41g#EGA-DefEn">
-                      PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                      PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     A list of definitions and statements from the course.
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div></div><div class="note-version"><div class="note-links">
                     <a href="https://www.icloud.com/iclouddrive/022Peg09xRmqYLvycFTxoS5hQ">
-                      PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                      PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     Additional material on topics covered in the course, concerning Hilbert's basis theorem, discrete
                     valuation rings (DVR) and Bézout's theorem.
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <!-- Algebraic Geometry C -->
-          <tr>
-            <td>Algebraic Geometry C</td>
-            <td>28/07/2023</td>
-            <td colspan="2" style="padding: 0; margin: 0; border: 1px solid white;">
-              <table style="width: 100%; border-collapse: separate; border-spacing: 4px; table-layout: fixed;">
-                <colgroup>
-                  <col style="width: 16%;">
-                  <col style="width: 80%;">
-                </colgroup>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
-                    <a href="https://www.icloud.com/iclouddrive/043HqQ7CG_LojJCPrCFCGQN7w#AGC">PDF <img
-                        src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                  </div></div></div></article><article class="note-entry" data-title="Algebraic Geometry C" data-date="2023-07-28">
+<div><h2>Algebraic Geometry C</h2><p class="note-meta">Updated 28/07/2023<br>Italian</p></div>
+<div class="note-description"><div class="note-version"><div class="note-links">
+                    <a href="https://www.icloud.com/iclouddrive/043HqQ7CG_LojJCPrCFCGQN7w#AGC">PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     A list of definitions and statements from the course taught by professor Marco Franciosi in the
                     academic
                     year 2022/2023.<br>
                     Main topics of the course:
-                    <button id=toggleText7 type="button">Show</button>
-                    <div id="extraText7" style="display:none; margin-top: 1rem;">
+
+                    <details><summary>Topics</summary>
                       - Definition and examples of Riemann surfaces. Holomorphic and meromorphic functions on Riemann
                       surfaces.
                       Group actions and finite Riemann surfaces;
@@ -394,40 +226,26 @@
                       Definition
                       of the Jacobian variety, Abel-Jacobi map.
                       The theorem of Abel and Jacobi.
-                    </div>
+                    </details>
                     <br>
                     The file includes notes on some theoretical parts concerning sheaves, Čech cohomology, vector
                     bundles,
                     divisors and base points
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div></div><div class="note-version"><div class="note-links">
                     <a href="https://www.icloud.com/iclouddrive/032lTmwnUC8bZwydZVNMGs_mw#SeminarioAGC">
-                      PDF <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                        style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;">
+                      PDF
                     </a>
-                  </td>
-                  <td style="border: 0px solid white; padding: 0.25rem;">
+                  </div><div>
                     Slides used to present the seminar for part of the exam, concerning inflection points, and more
                     specifically Weierstrass points.
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <!-- Groups and Representations -->
-          <tr>
-            <td>Groups and Representations</td>
-            <td>07/11/2022</td>
-            <td><a href="https://www.icloud.com/iclouddrive/068uf8jHdfNQjn-Zs3rBDTlcw#Rappresentazioni">PDF
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>A list of definitions and statements from the course taught by professors Michele D'Adderio and Giovanni
+                  </div></div></div></article><article class="note-entry" data-title="Groups and Representations" data-date="2022-11-07">
+<div><h2>Groups and Representations</h2><p class="note-meta">Updated 07/11/2022<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/068uf8jHdfNQjn-Zs3rBDTlcw#Rappresentazioni">PDF
+                </a></div></div>
+<div class="note-description">A list of definitions and statements from the course taught by professors Michele D'Adderio and Giovanni
               Gaiffi in the academic year 2022/2023.<br>
               Main topics of the course:
-              <button id=toggleText8 type="button">Show</button>
-              <div id="extraText8" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - Representation theory of finite groups: definition, subrepresentation, irreducible representation,
                 complete reducibility, Schur's lemma.<br>
                 - Characters and orthonormality of the characters of irreducible representations. Induction.
@@ -435,7 +253,7 @@
                 - Representation of the symmetric group: construction of representations and characters. Schur's
                 duality.
                 Algebraic Representations of the general linear group.
-              </div>
+              </details>
               <br><br>
               The file includes notes on some theoretical parts concerning induced representations, the Jacobi-Trudi
               identity, representations of an index 2 subgroup and of
@@ -443,42 +261,28 @@
               as
               well as a summary table of bases of symmetric
               function spaces.
-            </td>
-          </tr>
-          <!-- Coxeter Groups -->
-          <tr>
-            <td>Coxeter Groups</td>
-            <td>03/06/2025</td>
-            <td><a href="https://www.icloud.com/iclouddrive/09bf98hxGG4UQ8yX4ZBXcAcow#Coxeter">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>Written in collaboration with Sabrina Botticchio, Alessio Sgubin, Giuseppe Mascellani, Giovanni Marzenta
+            </div></article><article class="note-entry" data-title="Coxeter Groups" data-date="2025-06-03">
+<div><h2>Coxeter Groups</h2><p class="note-meta">Updated 03/06/2025<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/09bf98hxGG4UQ8yX4ZBXcAcow#Coxeter">PDF </a></div></div>
+<div class="note-description">Written in collaboration with Sabrina Botticchio, Alessio Sgubin, Giuseppe Mascellani, Giovanni Marzenta
               and Mirko Torresani, these are notes from the
               course taught by professors Michele D'Adderio and Mario Salvetti in the academic year 2023/2024.<br>
               Main topics of the course:
-              <button id=toggleText9 type="button">Show</button>
-              <div id="extraText9" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - Basic theory of Coxeter groups: their presentation, geometric realization, combinatorial
                 characterization.<br>
                 - Associated combinatorial structures: Bruhat order, order complex, root system.<br>
                 - Classification of finite Coxeter groups.<br>
                 - Applications in combinatorics and topology.
-              </div>
-            </td>
-          </tr>
-          <!-- Algebraic Number Theory 1 -->
-          <tr>
-            <td>Algebraic Number Theory 1</td>
-            <td>21/02/2023</td>
-            <td><a href="https://www.icloud.com/iclouddrive/083-mWYkUbAGBslYa3t6TWx-w#TAN1">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>My notes from the course taught by professors Ilaria Del Corso and Roberto Dvornicich in the academic
+              </details>
+            </div></article><article class="note-entry" data-title="Algebraic Number Theory 1" data-date="2023-02-21">
+<div><h2>Algebraic Number Theory 1</h2><p class="note-meta">Updated 21/02/2023<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/083-mWYkUbAGBslYa3t6TWx-w#TAN1">PDF </a></div></div>
+<div class="note-description">My notes from the course taught by professors Ilaria Del Corso and Roberto Dvornicich in the academic
               year
               2017/2018.<br>
               Main topics of the course:
-              <button id=toggleText10 type="button">Show</button>
-              <div id="extraText10" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - Integral extensions of a ring. Trace and norm. Additive structure of the ring of integers of a number
                 field. Integral bases.<br>
                 - Dedekind domains. Fractional ideals and group of ideal classes. Unique factorization of ideals in
@@ -487,168 +291,30 @@
                 extensions: decomposition and inertia groups. Frobenius morphism. Ramified primes.<br>
                 - Minkowski Convex Body Theorem. The group of ideal classes is finite. Minkowski constant. Dirichlet's
                 unit theorem.
-              </div>
-            </td>
-          </tr>
-          <!-- Algebra -->
-          <tr>
-            <td>Algebra</td>
-            <td>13/03/2022</td>
-            <td><a href="https://www.icloud.com/iclouddrive/076s0gDP8CmM7U-xzAf7lcxzg#IstAlg">PDF <img
-                  src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Italian flag"
-                  style="width:24px; height:auto; vertical-align:middle; margin-left:0.5rem;"></a></td>
-            <td>My notes from the course taught by professor Andrea Maffei in the academic year 2019/2020.<br>
+              </details>
+            </div></article><article class="note-entry" data-title="Algebra" data-date="2022-03-13">
+<div><h2>Algebra</h2><p class="note-meta">Updated 13/03/2022<br>Italian</p><div class="note-links"><a href="https://www.icloud.com/iclouddrive/076s0gDP8CmM7U-xzAf7lcxzg#IstAlg">PDF </a></div></div>
+<div class="note-description">My notes from the course taught by professor Andrea Maffei in the academic year 2019/2020.<br>
               Main topics of the course:
-              <button id=toggleText11 type="button">Show</button>
-              <div id="extraText11" style="display:none; margin-top: 1rem;">
+
+              <details><summary>Topics</summary>
                 - Notions of dimension for a commutative ring. Krull's Hauptidealsatz and applications.<br>
                 - Regular sequences, regular local rings, equivalent characterizations. Completion, Artin-Rees
                 lemma.<br>
                 - Basic concepts of homological algebra: complexes, long exact sequences, derived categories, Ext and
                 Tor.
-                Homological dimension.</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="text-block" style="margin-top: 2rem;">
-    <h4>Contact:<br>
-      mattiapuddu@icloud.com</h4>
-  </div>
-
-  <script>
-    let sortDirections = {};
-
-    function sortTable(colIndex) {
-      const table = document.getElementById("myTable");
-      const tbody = table.tBodies[0];
-      const rows = Array.from(tbody.querySelectorAll("tr"));
-
-      sortDirections[colIndex] = !sortDirections[colIndex];
-      const isAscending = sortDirections[colIndex];
-
-      rows.sort((a, b) => {
-        const aText = a.cells[colIndex].textContent.trim().toLowerCase();
-        const bText = b.cells[colIndex].textContent.trim().toLowerCase();
-
-        if (colIndex === 1) {
-          const parseDate = (str) => {
-            const [d, m, y] = str.split("/");
-            return `${y}${m.padStart(2, '0')}${d.padStart(2, '0')}`;
-          };
-          return isAscending
-            ? parseDate(aText).localeCompare(parseDate(bText))
-            : parseDate(bText).localeCompare(parseDate(aText));
-        } else {
-          return isAscending
-            ? aText.localeCompare(bText)
-            : bText.localeCompare(aText);
-        }
-      });
-
-      rows.forEach(row => tbody.appendChild(row));
-    }
-  </script>
-
-  <script>
-    function sortTable(colIndex) {
-      const table = document.getElementById("myTable");
-      const tbody = table.tBodies[0];
-      const rows = Array.from(tbody.rows);
-      let asc = table.getAttribute("data-sort-dir") !== "asc";
-      table.setAttribute("data-sort-dir", asc ? "asc" : "desc");
-
-      rows.sort((a, b) => {
-        const cellA = a.cells[colIndex].textContent.trim();
-        const cellB = b.cells[colIndex].textContent.trim();
-
-        const dateA = parseDate(cellA);
-        const dateB = parseDate(cellB);
-
-        if (dateA && dateB) {
-          return asc ? dateA - dateB : dateB - dateA;
-        } else {
-          const textA = cellA.toLowerCase();
-          const textB = cellB.toLowerCase();
-          if (textA < textB) return asc ? -1 : 1;
-          if (textA > textB) return asc ? 1 : -1;
-          return 0;
-        }
-      });
-
-      rows.forEach(row => tbody.appendChild(row));
-    }
-
-    function parseDate(str) {
-      const parts = str.split("/");
-      if (parts.length === 3) {
-        const [day, month, year] = parts.map(Number);
-        if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
-          return new Date(year, month - 1, day);
-        }
-      }
-      return null;
-    }
-
-    function filterTableAllCols() {
-      const input = document.getElementById("searchBothCols");
-      const filter = input.value.toLowerCase();
-      const table = document.getElementById("myTable");
-      const rows = table.tBodies[0].rows;
-
-      for (let row of rows) {
-        let textFound = false;
-
-        for (let cell of row.cells) {
-          if (cell.textContent.toLowerCase().includes(filter)) {
-            textFound = true;
-            break;
-          }
-        }
-
-        row.style.display = textFound ? "" : "none";
-      }
-    }
-  </script>
-
-  <script>
-    function toggleExtraText(idButton, idText) {
-      document.getElementById(idButton).addEventListener('click', function () {
-        const extraText = document.getElementById(idText);
-        if (extraText.classList.contains('show')) {
-          extraText.classList.remove('show');
-          extraText.style.display = 'none';
-          this.textContent = 'Show';
-        } else {
-          extraText.style.display = 'block';
-          void extraText.offsetWidth;
-          extraText.classList.add('show');
-          this.textContent = 'Hide';
-        }
-      });
-    }
-    toggleExtraText('toggleText1', 'extraText1');
-    toggleExtraText('toggleText2', 'extraText2');
-    toggleExtraText('toggleText3', 'extraText3');
-    toggleExtraText('toggleText4', 'extraText4');
-    toggleExtraText('toggleText5', 'extraText5');
-    toggleExtraText('toggleText6', 'extraText6');
-    toggleExtraText('toggleText7', 'extraText7');
-    toggleExtraText('toggleText8', 'extraText8');
-    toggleExtraText('toggleText9', 'extraText9');
-    toggleExtraText('toggleText10', 'extraText11');
-    toggleExtraText('toggleText11', 'extraText11');
-  </script>
-
+                Homological dimension.</details>
+            </div></article></div><p id="notes-empty" hidden>No notes match your search.</p></main>
+  <footer class="site-footer"><span>Mattia Puddu · Mathematics</span>
+<div class="footer-links"><a class="github-link" href="https://github.com/MattiaPuddu25"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.65 7.65 0 0 1 8 3.86c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg><span>GitHub</span></a>
+<a href="mailto:mattia.puddu@rwth-aachen.de">mattia.puddu@rwth-aachen.de</a></div></footer>
+</div>
 <!-- Default Statcounter code for Lecture Notes
 https://mattiapuddu25.github.io/LectureNotes.html -->
 <script type="text/javascript">
-var sc_project=13342198; 
-var sc_invisible=1; 
-var sc_security="54d9bc6a"; 
+var sc_project=13342198;
+var sc_invisible=1;
+var sc_security="54d9bc6a";
 </script>
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
@@ -660,7 +326,5 @@ src="https://c.statcounter.com/13342198/0/54d9bc6a/1/"
 alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
-
 </body>
-
 </html>
